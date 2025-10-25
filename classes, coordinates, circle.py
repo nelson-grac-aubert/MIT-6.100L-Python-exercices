@@ -6,6 +6,9 @@ class Coordinates(object) :
         self.x = xval
         self.y = yval
 
+    def __str__ (self) : ## méthode ou l'on choisit ce que print envoie dans le terminal
+        return "<" + str(self.x) + "," + str(self.x) + ">"
+
     def distance(self, other) : 
         """ returns the euclidian distance between two coordinates objects"""
         x_diff_sq = (self.x - other.x)**2
@@ -45,3 +48,5 @@ point_en_dehors = Coordinates(1000,2000)
 point_dans_moncercle = Coordinates(2,3)
 print(moncercle.is_inside(point_en_dehors))
 print(moncercle.is_inside(point_dans_moncercle))
+print(moncentre)
+print(isinstance(moncentre,Coordinates)) # check si un objet est de la classe, True ici
